@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Flashable ZIP
-        path: build/BromiteSystemWebViewMagisk.zip
+        path: build/*.zip
