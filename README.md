@@ -9,7 +9,7 @@ In order to make this work you need to get [AOSmium 138.0.7204.168](https://gith
 Lastly, after installing the app using systemizer (and therefore systemizing it), you should install it again using the native android package installer, this will install all the libraries in the correct place.
 
 ### Versions Note:
-138.0.7204.168 is not actually the final chromium build released for Android, it's actually v138.0.7204.184 .  If you can figure out how to build cromite webview for v138.0.7204.184 and arm, do let me know, and ideally push webview arm builds to their ci pipeline. :)
+138.0.7204.168 is not actually the final chromium-based build released for Android, it's actually v138.0.7204.184 .  The fork developers all stopped building for 26-28 when google did.  If you can figure out how to build cromite webview for arm v138.0.7204.184 (or especially newer versions), do let me know, and ideally push webview arm builds to their ci pipeline. :)  I cloned it and tried their build actions but it stayed forever at "waiting for runner" and I didn't feel like running my own runner.
 
 ### Code note:
 I just patched the module so it would work but didn't clean up any of the bromite stuff so it tries to build and install bromite systemwebview too, if you want to take a close look at build.sh and remove the bromite stuff be my guest.
