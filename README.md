@@ -1,18 +1,24 @@
 # ~~Bromite~~ AOSMium SystemWebView Overlay
 
-## Note specifically about AOSMium:
+## Notes specifically about AOSMium:
 
 In order to make this work you need to get [AOSmium 138.0.7204.168](https://github.com/AXP-OS/app_aosmium/releases/tag/138.0.7204.168) - The last version of AOSmium on ABI 26-28.  You need to make sure it installs in /system/app - specifically the apk should be installed as: /system/app/org.axpos.aosmium_wv/org.axpos.aosmium_wv.apk [Magisk's Terminal Systemizer](https://github.com/Magisk-Modules-Repo/terminal_systemizer) will automate that for you.  I installed the apk using terminal systemizer, not by converting it after it was already user installed.  This is the only tested method which has worked, I do not recommend /system/app mover.  Overlay is untested but should work, both via root and recovery overlay you'll have to overlay the webview apk yourself.
 
-Versions Note: 138.0.7204.168 is not actually the final chromium build released for Android, it's actually v138.0.7204.184 .  If you can figure out how to build cromite webview for v138.0.7204.184 and arm, do let me know, and ideally push webview arm builds to their ci pipeline. :)
+### Versions Note:
+138.0.7204.168 is not actually the final chromium build released for Android, it's actually v138.0.7204.184 .  If you can figure out how to build cromite webview for v138.0.7204.184 and arm, do let me know, and ideally push webview arm builds to their ci pipeline. :)
 
-Code note: I just patched the module so it would work but didn't clean up any of the bromite stuff so it tries to build and install bromite systemwebview too, if you want to take a close look at build.sh and remove the bromite stuff be my guest.
+### Code note:
+I just patched the module so it would work but didn't clean up any of the bromite stuff so it tries to build and install bromite systemwebview too, if you want to take a close look at build.sh and remove the bromite stuff be my guest.
 
-Tested working on: Android 8.1 - Magisk Terminal Systemizer - AOSmium Webview 138.0.7204.168 ARM32 - [Busybox NDK](https://github.com/Magisk-Modules-Repo/busybox-ndk) (Required for Magisk Terminial Systemizer)
+### Tested working on:
+Android 8.1 - Magisk Terminal Systemizer - AOSmium Webview 138.0.7204.168 ARM32 - [Busybox NDK](https://github.com/Magisk-Modules-Repo/busybox-ndk) (Required for Magisk Terminial Systemizer)
 
-Installing Magisk Terminal Systemizer and Busybox-NDK: just git clone / download the zip and then make a new zip which has zero-depth to the root directory (the base level files need to not be in a folder, github zip download will put them in one) - then magisk flash
+### Installing Magisk Terminal Systemizer and Busybox-NDK: 
+Just git clone or download and decompress the codebase zip and then make a new zip which has zero-depth to the root directory (the base level files need to not be in a folder, github zip download will put them in one) - then magisk flash
 
-### Following text is from upstream README
+---
+
+## Following text is from upstream README
 
 **As the Bromite project seems to be dormant and using an outdated WebView introduces several security issues, the new version also provides a way to install [Mulch SystemWebView](#mulch-systemwebview). The name of the package will remain the same.**
 
