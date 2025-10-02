@@ -1,8 +1,12 @@
 # ~~Bromite~~ AOSMium SystemWebView Overlay
 
-## Notes specifically about AOSMium:
+v138 is out-of-date but still way better than what was left in my device (v61!).  Better to use [Ironfox](https://gitlab.com/ironfox-oss/IronFox/-/releases) whose latest versions, as of writing, still supports down to Android 5.
+
+## Notes specifically about AOSMium System Webview Overlay:
 
 In order to make this work you need to get [AOSmium 138.0.7204.168](https://github.com/AXP-OS/app_aosmium/releases/tag/138.0.7204.168) - The last version of AOSmium on ABI 26-28.  You need to make sure it installs in /system/app - specifically the apk should be installed as: /system/app/org.axpos.aosmium_wv/org.axpos.aosmium_wv.apk [Magisk's Terminal Systemizer](https://github.com/Magisk-Modules-Repo/terminal_systemizer) will automate that for you.  I installed the apk using terminal systemizer, not by converting it after it was already user installed.  This is the only tested method which has worked, I do not recommend /system/app mover.  Overlay is untested but should work, both via root and recovery overlay you'll have to overlay the webview apk yourself.
+
+Lastly, after installing the app using systemizer (and therefore systemizing it), you should install it again using the native android package installer, this will install all the libraries in the correct place.
 
 ### Versions Note:
 138.0.7204.168 is not actually the final chromium build released for Android, it's actually v138.0.7204.184 .  If you can figure out how to build cromite webview for v138.0.7204.184 and arm, do let me know, and ideally push webview arm builds to their ci pipeline. :)
